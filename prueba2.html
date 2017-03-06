@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="universidad-app">
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <script src="js/angular.min.js"></script>
+     <script src="js/prueba2.js"></script> 
+</head>
+
+<body ng-controller="profesorCtrl as profe">
+
+     <div class="container">
+            
+    Hola {{profesor.nombre}} de {{profesor.edad}} trabajador de {{profesor.ciudad|lowercase}}
+    <br><button class="btn btn-primary" ng-click="EditarProfesor()">Editar </button><br>
+
+
+
+    <div class="container" ng-show="mostrar">
+
+    Introduzca su nombre : <input type="text" ng-model="editar.nombre"  class="form-control"  placeholder="Ingrese el nombre" autofocus /><br>
+    Introduzca su edad : <input type="number" ng-model="editar.edad" class="form-control" /><br>
+    Introduzca su puesto : <input type="text" ng-model="editar.ciudad" class="form-control" /><br>
+
+   <br><button class="btn btn-primary" ng-click="GuardarProfesor()">Salvar </button><br>
+   <br><button class="btn btn-primary" ng-click="CancelarProfesor()">Cancelar </button><br>
+   
+   </div>
+     </div>
+
+</body>
+
+</html>
