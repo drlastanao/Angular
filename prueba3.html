@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="universidad-app">
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <script src="js/angular.min.js"></script>
+     <script src="js/prueba3.js"></script> 
+</head>
+
+<body ng-controller="profesorCtrl as profe">
+
+     <div class="container">
+            
+    Hola {{datos}} 
+
+        <ul>
+          <li ng-repeat="nombre in datos">{{nombre}}</li>
+        </ul>
+     </div>
+
+</body>
+
+</html>
