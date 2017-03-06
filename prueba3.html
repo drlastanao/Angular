@@ -23,7 +23,7 @@
 <br><br><br>
      <table class="table table-striped">
        <tr>
-         <th> <a href="#" ng-click="columna='nombre';reverse=!reverse;">Nombre</a></th>
+         <th> <a href="#" ng-click="columna='nombre';reverse=!reverse;">Nombre</a><chor/th>
          <th> <a href="#" ng-click="columna='edad';reverse=!reverse;">Edad</a></th>
          <th> <a href="#"ng-click="columna='ciudad';reverse=!reverse;">Ciudad</a></th>
        </tr>
@@ -37,6 +37,16 @@
 
      </div>
 
+
+<div  class="container">
+
+Su pais actual es {{pais}}
+
+<select ng-model="pais" class="form control" ng-options="pais.id as pais.nombre for pais in paises">
+<option>Seleccione</option>
+
+</select>
+  </div>
 
 
 </body>
