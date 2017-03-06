@@ -18,15 +18,16 @@
           <li ng-repeat="nombre in datos">{{nombre}}</li>
         </ul>
      
-     
+   <br><br>  
+     Filtro de nombres <input type="text" ng-model="busqueda"  class="form-control"  placeholder="Ingrese el filtro" autofocus /> 
 <br><br><br>
      <table class="table table-striped">
        <tr>
-         <th>Nombre</th>
-         <th>Edad</th>
-         <th>Ciudad</th>
+         <th> <a href="#" ng-click="columna='nombre';reverse=!reverse;">Nombre</a></th>
+         <th> <a href="#" ng-click="columna='edad';reverse=!reverse;">Edad</a></th>
+         <th> <a href="#"ng-click="columna='ciudad';reverse=!reverse;">Ciudad</a></th>
        </tr>
-       <tr ng-repeat="dato in datos2">
+       <tr ng-repeat="dato in datos2| filter:busqueda |orderBy:columna:reverse">
          <td>{{dato.nombre}}</td>
          <td>{{dato.edad}}</td>
          <td>{{dato.ciudad}}</td>
