@@ -11,12 +11,32 @@
 
      <div class="container">
             
-    Hola {{datos}} 
+    Hola {{datos}} <br>
+    Hola2 {{datos2}}<br><br>
 
         <ul>
           <li ng-repeat="nombre in datos">{{nombre}}</li>
         </ul>
+     
+     
+<br><br><br>
+     <table class="table table-striped">
+       <tr>
+         <th>Nombre</th>
+         <th>Edad</th>
+         <th>Ciudad</th>
+       </tr>
+       <tr ng-repeat="dato in datos2">
+         <td>{{dato.nombre}}</td>
+         <td>{{dato.edad}}</td>
+         <td>{{dato.ciudad}}</td>
+       </tr>
+     </table>
+
+
      </div>
+
+
 
 </body>
 
