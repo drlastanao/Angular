@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="universidad-app">
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <script src="js/angular.min.js"></script>
+     <script src="js/prueba4.js"></script> 
+</head>
+
+<body ng-controller="mainCtrl as profe">
+
+     <div class="container">
+            
+    Hola {{profesores}} <br><br><br><br>
+     <table class="table table-striped">
+       <tr>
+         <th> Nombre</th>
+         <th> Segundo nombre</th>
+         <th> Telefono</th>
+         <th> celular</th>
+         <th> sexo</th>
+         
+       </tr>
+       <tr ng-repeat="dato in profesores">
+         <td>{{dato.nombre}}</td>
+         <td>{{dato.snombre}}</td>
+         <td>{{dato.telefono}}</td>
+         <td>{{dato.celular}}</td>
+         <td>{{dato.sexo}}</td>
+       </tr>
+     </table>
+
+     </div>
+
+
+<
+</body>
+
+</html>
